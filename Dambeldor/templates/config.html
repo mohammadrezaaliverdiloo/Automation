@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>
+config
+</title>    
+</head>
+<body>
+<h1>{{mode}}</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    
+    <h6>choose target</h6>
+    {% for device in devices %}
+    <input type="checkbox" name = "device" value="{{device.id}}"> {{device.ip_address}} - {{device.hostname}}
+    {% endfor %}
+
+    <h6>mikrotik</h6>
+    <textarea rows="5" name = "mikrotik_command"></textarea
+
+    <h6>cisco</h6>
+    <textarea rows="5" name = "cisco_command_command"></textarea>
+    
+    <button type="button">submit</button>
+</form>
+</body>
+
+</html>

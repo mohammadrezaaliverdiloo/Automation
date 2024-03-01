@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>
+device
+</title>    
+</head>
+<body>
+     
+    {% for device in all_devices %}
+    <br>
+    {{device.ip_address}} ---
+    {{device.hostname}} ---
+    {{device.vendor}}
+    {% endfor%}
+   
+
+</body>
+
+</html>

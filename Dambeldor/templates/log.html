@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>
+logs
+</title>    
+</head>
+<body>
+   {% for log in logs %}
+   {{log.target}} | 
+   {{log.action}} | 
+   {{log.status}} |
+   {{log.time}} |
+   {{log.message}}
+
+   {%endfor%}
+</body>
+
+</html>
